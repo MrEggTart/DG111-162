@@ -6,6 +6,7 @@ int main()
     int Enemy_Defense;
     int Hit_Number;
     float Critical_Hit;
+    int Enemy_Hp = 500;
     printf("Enter Player Damage: ");
     scanf("%d", &Player_Damage);
     printf("Enter Enemy Defense: ");
@@ -18,12 +19,13 @@ int main()
     {
          Critical_Hit = (float)ceil((float)(Player_Damage - Enemy_Defense) * 1.5f);
          printf("Damage: %.0f *** CRITICAL HIT! x1.5 *** \n", Critical_Hit);
-
+        printf("Enemy Hp: %d \n", Enemy_Hp - (int)Critical_Hit);
     }
     else
     {
         float Damage = (float)(Player_Damage - Enemy_Defense);
-        printf("Damage: %f (Normal) \n", Damage);
+        printf("Damage: %.0f (Normal) \n", Damage);
+        printf("Enemy Hp: %d \n", Enemy_Hp - (int)Damage);
     }
 
     return 0;

@@ -19,7 +19,7 @@ int main()
     {
          Critical_Hit = (float)ceil((float)(Player_Damage - Enemy_Defense) * 1.5f);
          printf("Damage: %.0f *** CRITICAL HIT! x1.5 *** \n", Critical_Hit);
-        printf("Enemy Hp: %d \n", Enemy_Hp - (int)Critical_Hit);
+         printf("Enemy Hp: %d \n", Enemy_Hp - (int)Critical_Hit);
     }
     else
     {
@@ -27,6 +27,6 @@ int main()
         printf("Damage: %.0f (Normal) \n", Damage);
         printf("Enemy Hp: %d \n", Enemy_Hp - (int)Damage);
     }
-
+    
     return 0;
 }
